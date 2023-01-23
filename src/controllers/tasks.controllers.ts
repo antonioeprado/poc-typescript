@@ -1,5 +1,6 @@
 import {
   findAllTasks,
+  findTaskById,
   taskCreation,
   taskEditing,
   taskRemoval,
@@ -12,6 +13,16 @@ export async function getAllTasks(req: Request, res: Response) {
   try {
     const allTasks = await findAllTasks();
     return res.status(httpStatus.OK).send(allTasks);
+  } catch (error) {
+    return res.status(httpStatus.NOT_FOUND).send(error);
+  }
+}
+
+export async function getTaskById(req: Request, res: Response) {
+  const { id } = req.params as Record<string, string>;
+  try {
+    const task = await findTaskById(id);
+    return res.status(httpStatus.OK).send(task);
   } catch (error) {
     return res.status(httpStatus.NOT_FOUND).send(error);
   }

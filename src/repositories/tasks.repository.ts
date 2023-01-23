@@ -6,6 +6,12 @@ export function retrieveAllTasks(): PrismaPromise<Tasks[]> {
   return prisma.tasks.findMany();
 }
 
+export function retrieveTaskById(id: number): PrismaPromise<Tasks> {
+  return prisma.tasks.findFirst({
+    where: { id },
+  });
+}
+
 export function createTask(data: Task) {
   return prisma.tasks.create({ data });
 }
