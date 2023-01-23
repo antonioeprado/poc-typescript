@@ -3,10 +3,10 @@ import {
   taskCreation,
   taskEditing,
   taskRemoval,
-} from "../services/tasks.services.js";
+} from "@/services";
 import { Request, Response } from "express";
 import httpStatus from "http-status";
-import { Task } from "@/protocols/tasks.protocols.js";
+import { Task } from "@/protocols";
 
 export async function getAllTasks(req: Request, res: Response) {
   try {

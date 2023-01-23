@@ -1,6 +1,6 @@
-import { prisma } from "../database/index.js";
+import { prisma } from "@/database";
 import { PrismaPromise, Tasks } from "@prisma/client";
-import { Task } from "@/protocols/tasks.protocols.js";
+import { Task } from "@/protocols";
 
 export function retrieveAllTasks(): PrismaPromise<Tasks[]> {
   return prisma.tasks.findMany();

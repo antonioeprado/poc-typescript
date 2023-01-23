@@ -1,16 +1,12 @@
-import {
-  getAllTasks,
-  postTask,
-  patchTask,
-  deleteTask,
-} from "../controllers/tasks.controllers.js";
+import { getAllTasks, postTask, patchTask, deleteTask } from "@/controllers/";
 import { Router } from "express";
+import { validateBody } from "@/middlewares";
 
-const router = Router();
+const tasksRouter = Router();
 
-router.get("/all", getAllTasks);
-router.post("/", postTask);
-router.patch("/:id", patchTask);
-router.delete("/:id", deleteTask);
+tasksRouter.get("/all", getAllTasks);
+tasksRouter.post("/", validateBody, postTask);
+tasksRouter.patch("/:id", validateBody, patchTask);
+tasksRouter.delete("/:id", deleteTask);
 
-export default router;
+export { tasksRouter };

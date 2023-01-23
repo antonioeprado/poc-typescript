@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
+    "target": "es2020",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "dist",
     "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "rootDir": "src",
+    // "moduleResolution": "Node",
+    "rootDirs": ["src"],
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
     },
-    "module": "es6"
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      }
+    ]
+    // "module": "es6"
   },
   "ts-node": {
     "esm": true

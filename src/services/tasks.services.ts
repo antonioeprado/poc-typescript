@@ -3,9 +3,9 @@ import {
   retrieveAllTasks,
   editTask,
   removeTask,
-} from "../repositories/tasks.repository.js";
+} from "@/repositories";
 import { Tasks } from "@prisma/client";
-import { Task } from "@/protocols/tasks.protocols.js";
+import { Task } from "@/protocols";
 
 async function findAllTasks(): Promise<Tasks[]> {
   return await retrieveAllTasks();
