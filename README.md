@@ -19,6 +19,8 @@ For more information about the API, see the [documentation](#documentation).
 <code>
 GET: "/tasks/all"
 
+GET: "/tasks/:id"
+
 POST: "/tasks
 Body: {
     "taskName": string with 3 characters minimum. Required.
@@ -26,6 +28,7 @@ Body: {
     "dueTo": date formated string. Optional.
     "createdAt": date formated string, Forbidden. (to be used by the database)
 }
+
 PATCH: "/tasks/:id"
 Body: {
     "taskName": string with 3 characters minimum. Required.
@@ -33,6 +36,7 @@ Body: {
     "dueTo": date formated string. Optional.
     "createdAt": date formated string, Forbidden. (to be used by the database)
 }
+
 DELETE: "/tasks/:id"
 </code>
 </pre>
