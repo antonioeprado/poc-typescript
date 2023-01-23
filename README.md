@@ -1,7 +1,7 @@
 # About this project
 
 Hi!
-This is a simple POC to prove my learning of TypeScript language.
+This is a simple POC to prove my learning of the TypeScript language.
 It is a simple To-Do list with basic CRUD operations.
 For more information about the API, see the [documentation](#documentation).
 
