@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "module": "es6"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src"]
+}
